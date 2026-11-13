@@ -1,0 +1,43 @@
+{
+  "trajectory_id": "tokyo_u4_boundary_60m_256",
+  "generation_status": "succeeded",
+  "generator_version": "shared-multi-uav-gpx-1.0.0",
+  "coordinate_converter_version": "shared-geodetic-1.0.0",
+  "anchor_id": "configs/geospatial/tokyo_aodt_scene_contract.json#geodetic_anchor",
+  "sample_count": 256,
+  "sample_interval_s": 0.25,
+  "altitude_reference": "AGL",
+  "design_config_path": "configs/trajectories/shared/tokyo_u4_boundary_60m_256_design.json",
+  "design_config_sha256": "524d3fbe77ddcc04e98d28fddf57b5d83849b30837e36d87ecd210b7260c3471",
+  "canonical_enu_path": "configs/trajectories/shared/tokyo_u4_boundary_60m_256_enu.json",
+  "canonical_enu_sha256": "e9f313f84355d05ed7936f2c17bc7888e96b0eb6940d6c5de7bd59da7f1499c3",
+  "gpx_files": [
+    {
+      "path": "configs/gpx/shared/tokyo_u4_boundary_60m_256/uav_01_boundary_60m_256.gpx",
+      "sha256": "bdb9bb2cbb26928cf82066183b397d76aeefabe04c6528afdf38241d176a257e"
+    },
+    {
+      "path": "configs/gpx/shared/tokyo_u4_boundary_60m_256/uav_02_boundary_60m_256.gpx",
+      "sha256": "9276291d0d195b1852c6d7e2e2aa6cc548c040301590f255ecfb7a3ce3c16eed"
+    },
+    {
+      "path": "configs/gpx/shared/tokyo_u4_boundary_60m_256/uav_03_boundary_60m_256.gpx",
+      "sha256": "85d870f4f8acd853bed4206ddfc965dd50c9adb70fb00fded609f98e0523ad34"
+    },
+    {
+      "path": "configs/gpx/shared/tokyo_u4_boundary_60m_256/uav_04_boundary_60m_256.gpx",
+      "sha256": "589ff6997dfb0a44176f931a25b20f20c5f53b2d0777c9beacf002d1a479407b"
+    }
+  ],
+  "resolved_csv_path": "artifacts/trajectory/tokyo_u4_boundary_60m_256_resolved.csv",
+  "resolved_csv_sha256": "533c7be1178ce83fa132292b5566cdff03518539c86421ae0d848a8089044758",
+  "preview_path": "artifacts/trajectory/tokyo_u4_boundary_60m_256_preview.json",
+  "preview_sha256": "1dcfdccf7e2e62c844a953a7e41305fad476082a31f810dc60329cb670b745bc",
+  "bu_scenario_path": "configs/scenarios/bu/tokyo_BU_multi_uav.json",
+  "bu_scenario_sha256": "43b21038cec1ed5a4740865a50056b3d44af09ab654f0992ac257d7ca745ec8b",
+  "source_scenario_path": "configs/scenario_layout_tokyo_docomo.json",
+  "source_scenario_sha256": "da49c7c82833e867c6bf5ecd0eaedd1fe0d33c6dc6431357ffc05b07f0710ffb",
+  "geodetic_metadata_path": "configs/geospatial/tokyo_aodt_scene_contract.json",
+  "geodetic_metadata_sha256": "6f248d3d714556c70629c85f1bf3dbd07ec01d9b3222ce47f4b8dc2418f51791",
+  "deterministic_hash_check_passed": true
+}

@@ -1,0 +1,17 @@
+An Automated Aerial Digital Twin Pipeline for Reproducible and Scalable 6G Channel Datasets and Network-AI Validation
+
+Except where otherwise noted, project-authored source code and documentation
+are made available under the Apache License, Version 2.0.
+
+This is an independent research project and is not affiliated with or endorsed
+by NVIDIA. NVIDIA, Aerial, Omniverse, and related names may be trademarks of
+their respective owners.
+
+Third-party components and data remain subject to their original terms. See
+THIRD_PARTY_NOTICES.md.
+
+This project uses NVIDIA Aerial Omniverse Digital Twin (AODT) as an external
+RF-simulation backend. The upstream AODT project is Copyright NVIDIA
+Corporation & Affiliates and is made available under the Apache License 2.0.
+No NVIDIA source code, credentials, hosted services, or scene assets are
+included in this repository.

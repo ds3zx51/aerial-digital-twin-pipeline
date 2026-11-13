@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: >-
+  If you use this repository, please cite the associated paper once its
+  citation becomes available.
+type: software
+title: >-
+  An Automated Aerial Digital Twin Pipeline for Reproducible and Scalable 6G
+  Channel Datasets and Network-AI Validation
+version: 0.2.0
+date-released: 2026-08-19
+authors:
+  - alias: ds3zx51
+repository-code: https://github.com/IPCLab/aerial-digital-twin-pipeline
+license: Apache-2.0
+abstract: >-
+  A reproducibility-oriented pipeline for AODT channel-data generation,
+  validation, dataset adaptation, and replaceable Network-AI evaluation.

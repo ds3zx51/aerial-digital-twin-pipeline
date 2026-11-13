@@ -1,0 +1,1 @@
+{"lr": 0.001, "lrmin": 1e-05, "lrpatience": 10, "batch_size": 512, "epochs": 350, "Nclass": 3, "slice_len": 1, "num_feats": 22, "logdir": "./classifier_train_result/slice_model_train_result", "pos_enc": false, "patience": 30, "dropout": 0.25, "global_model": "TransformerNN", "model_postfix": "trans_v1", "device": "cuda"}

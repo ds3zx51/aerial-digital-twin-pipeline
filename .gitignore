@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Local environments and credentials
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+scripts/remote/remote_settings.bat
+
+# Runtime outputs
+results/**
+!results/README.md
+logs/**
+backups/
+advtabddpm_runs/
+incoming/
+**/source_scene/
+*.log
+*.tmp
+*.tar
+*.tar.gz
+*.sha256
+
+# AI Server test project: source and fixed checkpoints are tracked, generated
+# datasets/evaluations are not.
+ai_server/AdvTabDDPM/data/**
+!ai_server/AdvTabDDPM/data/README.md
+ai_server/AdvTabDDPM/results/**
+ai_server/AdvTabDDPM/catboost_info/**
+ai_server/AdvTabDDPM/exp/**/X_*.npy
+ai_server/AdvTabDDPM/exp/**/y_*.npy
+ai_server/AdvTabDDPM/exp/**/eval_confidence_details.csv
+ai_server/AdvTabDDPM/exp/**/result/**
+ai_server/AdvTabDDPM/classifier_train_result/**/test_dataset.pt
+
+# Locally supplied or third-party packages
+packages/**
+!packages/README.md
+
+# Local agent and editor state
+AGENTS.md
+.agents/
+.codex/
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Historical copies
+*.bak
+*.bak.*
+*.old
+*.orig
+*~
+
+# Vendor/authorized scene geometry is never source-controlled
+assets/**
+!assets/README.md

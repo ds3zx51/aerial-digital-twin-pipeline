@@ -1,0 +1,67 @@
+{
+  "profile_id": "aodt-advtabddpm-reference-2026.08",
+  "snapshot_date": "2026-08-13",
+  "role": "user_replaceable_ai_plugin_reference_example",
+  "upstream": {
+    "repository": "https://github.com/0425Ning/AdvTabDDPM",
+    "base_commit": null,
+    "base_commit_status": "UNRESOLVED",
+    "relationship": "locally_modified_derivative_of_earlier_implementation",
+    "official_upstream_release_claimed": false
+  },
+  "license": {
+    "covered_by_root_apache_2_0": false,
+    "status": "upstream_license_or_written_authorization_required"
+  },
+  "runtime_reference": {
+    "deployment_host": "developer_managed_linux_gpu_server",
+    "os": "Ubuntu 24.04.4 LTS x86-64",
+    "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+    "cpu": "Intel Core i7-14700, 20 cores / 28 threads",
+    "ram_gb": 32,
+    "python": "3.10.20",
+    "pytorch": "2.11.0+cu128",
+    "pytorch_cuda_runtime": "12.8",
+    "system_cuda_toolkit": null,
+    "nvidia_driver": "580.159.03",
+    "validated_gpu": "NVIDIA GeForce RTX 3080",
+    "validated_gpu_vram_bytes": 12479758336,
+    "validated_gpu_vram_gib": 11.623,
+    "gpu_is_minimum_requirement": false,
+    "cpu_ram_minimum": null
+  },
+  "reference_configuration": {
+    "seed": 1,
+    "diffusion_timesteps": 1000,
+    "scheduler": "cosine",
+    "training_steps": 3000,
+    "learning_rate": 0.0006309317827837794,
+    "training_batch_size": 512,
+    "sample_count": 6500,
+    "sampling_batch_size": 1024,
+    "sampling_seed": 4,
+    "classifier_model": "TransformerNN",
+    "classifier_variant": "trans_v1",
+    "classifier_classes": 3,
+    "classifier_epochs": 350,
+    "classifier_batch_size": 512,
+    "classifier_learning_rate": 0.001,
+    "classifier_dropout": 0.25
+  },
+  "integrity": {
+    "AdvTabDDPM/AdvTabDDPM.py": "304efb982264ef45de71ef52d3f7e72f0515101462ab5719b9b14efc944619c5",
+    "AdvTabDDPM/requirements.txt": "db161facd5974c0e78ab5098df1cb01069c1fe84072a512ff73f4eba8ddc1156",
+    "AdvTabDDPM/requirements-legacy.txt": "8c72e16f0ad8df4a999c3f27f7590c1c5d8930ff6aeef8667706c1db008094ba",
+    "AdvTabDDPM/requirements-adversarial.txt": "bc965a6f34baea8fa903ff4a8d8ce2d45f9035d7e09e4b3d1d8c7721972c460e",
+    "AdvTabDDPM/exp/colosseum/ddpm_tune_best/config.toml": "8a3140dd4645f41f9cb4257631a9a9d4394012cedbdc8ed8c1eb09c6e30619aa",
+    "AdvTabDDPM/classifier_train_result/slice_model_train_result/train_config.json": "b109e35b322940d5c01aba2eded3e1941697e3ef1852d64f5e5f055322e35fb8",
+    "environment.yml": "17c792e77e48f3fdcfc5b1d5587332a35cddcdc435ba2384bf952992941443ce",
+    "model_manifest.csv": "4f337e9ad6f68735c54438394530260a37f9ecba8d88e1318d2f607c179b79cd"
+  },
+  "environment_evidence": {
+    "paper": "NCU_Master_PhD__AODT (4).pdf, Table IV",
+    "archived_environment_capture": "colosseum_advtabddpm_eval_20260712T102059Z_6e2c765b9f75/environment.json",
+    "archived_aodt_log": "aodt_advtabddpm_eval_20260717T171657Z_8b6ce428cfc2/stdout.log",
+    "evidence_files_distributed_in_source_repository": false
+  }
+}

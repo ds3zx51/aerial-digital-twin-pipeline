@@ -1,0 +1,61 @@
+seed = 1
+parent_dir = "exp/colosseum/ddpm_tune_best"
+real_data_path = "data/colosseum_22"
+model_type = "mlp"
+num_numerical_features = 20
+device = "cuda:0"
+exp_name = "colosseum"
+
+[model_params]
+num_classes = 3
+is_y_cond = true
+d_in = 41
+
+[model_params.rtdl_params]
+d_layers = [
+    128,
+    512,
+    512,
+    1024,
+]
+dropout = 0.0
+d_in = 128
+d_out = 41
+
+[diffusion_params]
+num_timesteps = 1000
+gaussian_loss_type = "mse"
+scheduler = "cosine"
+
+[train.main]
+steps = 3000
+lr = 0.0006309317827837794
+weight_decay = 0.0
+batch_size = 512
+
+[train.T]
+seed = 0
+normalization = "quantile"
+num_nan_policy = "__none__"
+cat_nan_policy = "__none__"
+cat_min_frequency = "__none__"
+cat_encoding = "__none__"
+y_policy = "default"
+
+[sample]
+num_samples = 6500
+batch_size = 1024
+seed = 4
+
+[eval.type]
+eval_model = "tractor"
+eval_type = "synthetic"
+
+[eval.T]
+seed = 0
+normalization = "__none__"
+num_nan_policy = "__none__"
+cat_nan_policy = "__none__"
+cat_min_frequency = "__none__"
+cat_encoding = "__none__"
+y_policy = "default"

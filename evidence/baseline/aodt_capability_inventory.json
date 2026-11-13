@@ -1,0 +1,373 @@
+{
+    "schema_version":  "aodt-baseline-capability-inventory-v1",
+    "generated_at_utc":  "2026-07-17T08:58:43.2809266Z",
+    "status":  "complete_with_blockers",
+    "aodt_version_lock":  {
+                              "version":  "1.5.0",
+                              "client_repository":  "\u003cAODT_CLIENT_ROOT\u003e",
+                              "git_commit":  "f3378f57b2905a154d8b4b9d3a7d4b2483ab28a3",
+                              "branch":  "main",
+                              "working_tree_clean":  false,
+                              "worker_manual_commit":  "f3378f57b2905a154d8b4b9d3a7d4b2483ab28a3",
+                              "version_match":  true
+                          },
+    "client":  {
+                   "entry_point":  {
+                                       "path":  "\u003cAODT_CLIENT_ROOT\u003e/client/examples/example_client.py",
+                                       "sha256":  "e0eb31f04a737f22c31467ae17639beb6a450faa3ac62e623db8b900114c06e4",
+                                       "api":  "dt_client.DigitalTwinClient",
+                                       "connection_argument":  "--server_address",
+                                       "start_operation":  "client.start(yaml_content)",
+                                       "status_operations":  [
+                                                                 "get_status",
+                                                                 "get_ru_positions",
+                                                                 "get_ue_positions"
+                                                             ],
+                                       "channel_operations":  [
+                                                                  "allocate_cirs_memory",
+                                                                  "get_cirs",
+                                                                  "to_numpy",
+                                                                  "deallocate_cirs_memory"
+                                                              ]
+                                   },
+                   "config_builder":  {
+                                          "path":  "\u003cAODT_CLIENT_ROOT\u003e/client/examples/example_client_yaml_config.py",
+                                          "sha256":  "bf394a94b5e12bd87083f492ffaf95b1161a2b7ff80e35d96079dec71812a149",
+                                          "builder":  "SimConfig(scene, SimMode.EM, asset_config)",
+                                          "timeline":  {
+                                                           "batches":  1,
+                                                           "slots_per_batch":  12,
+                                                           "realizations_per_slot":  1,
+                                                           "seed":  10
+                                                       },
+                                          "tables":  [
+                                                         "CIRS",
+                                                         "CFRS",
+                                                         "RAYPATHS"
+                                                     ],
+                                          "telemetry":  "available in RAN mode but commented out in the EM example",
+                                          "parquet_export":  true,
+                                          "iceberg_optional":  true,
+                                          "scene_default":  "test_data/maps/tokyo",
+                                          "radio_example":  {
+                                                                "ru_frequency_mhz":  3600,
+                                                                "ue_frequency_mhz":  3600,
+                                                                "ru_radiated_power_dbm":  43,
+                                                                "ue_radiated_power_dbm":  26,
+                                                                "ru_panel":  "ThreeGPP38901, 1x2, dual polarized",
+                                                                "ue_panel":  "InfinitesimalDipole, 2x1, dual polarized"
+                                                            },
+                                          "topology_example":  {
+                                                                   "explicit_ru_count":  2,
+                                                                   "explicit_ue_count":  2,
+                                                                   "procedural_ue_count":  1,
+                                                                   "fixed_topology_acceptable":  false,
+                                                                   "reasons":  [
+                                                                                   "UE1 has multiple waypoints.",
+                                                                                   "One UE is procedurally spawned.",
+                                                                                   "The required locked 8-RU/50-UE IDs and coordinates are not present."
+                                                                               ]
+                                                               }
+                                      },
+                   "static_test_fixture":  {
+                                               "path":  "\u003cAODT_CLIENT_ROOT\u003e/client/tests/assets/TC_2RU_4UE_4T4R_1sym.yml",
+                                               "sha256":  "79935381e604bd0fe568b36073bdb9ccc6a6a28f7cb59237039c31aba1c211cd",
+                                               "ru_count":  2,
+                                               "ue_count":  4,
+                                               "ue_waypoints_per_ue":  1,
+                                               "ue_speed":  0,
+                                               "ue_manual":  true,
+                                               "vegetation_active":  false,
+                                               "scope_value":  "Proves that static explicit UE YAML is supported; it is not the required 8-RU/50-UE experiment."
+                                           },
+                   "asset_config":  {
+                                        "path":  "\u003cAODT_CLIENT_ROOT\u003e/client/examples/example_client_assets.yml",
+                                        "sha256":  "04a35c8ca27ca3494195ac764c176b593d6a0e46063dfb038709cac9ded4399d",
+                                        "references":  {
+                                                           "du":  "test_data/assets/du.json",
+                                                           "ru":  "test_data/assets/gnb.json",
+                                                           "ue":  "test_data/assets/ue.json",
+                                                           "materials":  "test_data/assets/materials.json",
+                                                           "scatterers":  "test_data/assets/car_small.json",
+                                                           "vegetation_materials":  "test_data/assets/vegetation_materials.json",
+                                                           "vegetation_assets":  "test_data/assets/street_tree.json",
+                                                           "scenario":  "test_data/assets/scenario.json",
+                                                           "panels":  "test_data/assets/panel.json"
+                                                       },
+                                        "resolved_in_client_checkout":  false,
+                                        "resolved_file_count":  0,
+                                        "formal_material_config_status":  "missing"
+                                    },
+                   "platform":  {
+                                    "windows_client_mode":  "REMOTE/gRPC CPU-side client",
+                                    "local_cuda_required":  false,
+                                    "python_module_examples":  [
+                                                                   "dt_client",
+                                                                   "_config"
+                                                               ]
+                                }
+               },
+    "worker":  {
+                   "deployment_archive":  {
+                                              "path":  "\u003cAODT_WORKER_PACKAGE\u003e",
+                                              "bytes":  13176,
+                                              "sha256":  "c6fbbf2f55d6c93370004031129651cb5fe049097b7c390fa6f8c4345c7ef412",
+                                              "contents_scope":  "Azure provisioning and worker installation scripts; the archive does not contain the AODT source tree, Tokyo scene, or test_data/assets bundle.",
+                                              "secret_file_present":  true,
+                                              "secret_file_inspected":  false
+                                          },
+                   "azure_reference":  {
+                                           "vm_size":  "Standard_NC24ads_A100_v4",
+                                           "os":  "Ubuntu 22.04",
+                                           "gpu":  "NVIDIA A100",
+                                           "ports_referenced":  [
+                                                                    50051,
+                                                                    9000,
+                                                                    19120
+                                                                ]
+                                       },
+                   "manual_evidence":  {
+                                           "static_e2e_example":  {
+                                                                      "ru_count":  2,
+                                                                      "ue_count":  3,
+                                                                      "slot_count":  12,
+                                                                      "result":  "CIR returned over gRPC"
+                                                                  },
+                                           "gpx_example":  {
+                                                               "excluded":  true,
+                                                               "reason":  "GPX/mobility is prohibited by the fixed-UE branch."
+                                                           },
+                                           "important_boundary":  "The manuals demonstrate client/worker CIR retrieval, not a formal 8-RU/50-UE Tokyo dataset or AdvTabDDPM-ready schema."
+                                       }
+               },
+    "tokyo_scene":  {
+                        "archive":  {
+                                        "path":  "\u003cAODT_SCENE_ARCHIVE\u003e",
+                                        "bytes":  136004606,
+                                        "sha256":  "2b64f85bc188586d371777485d8d367a4f1f911e32ab0c8584a60e0d4ccc4ddb"
+                                    },
+                        "primary_stage":  "tokyo/sim/master.usd",
+                        "tile_stage":  "tokyo/sim/master_tiles/tile_0_0.usd",
+                        "vegetation_file":  {
+                                                "path_in_archive":  "tokyo/sim/vegetation.geojson",
+                                                "bytes":  1097550
+                                            },
+                        "metadata":  {
+                                         "crs":  "EPSG:32654",
+                                         "center_lat":  35.65836835928626,
+                                         "center_lon":  139.74380459351428,
+                                         "anchor_x_m":  386292.85575619363,
+                                         "anchor_y_m":  3946784.3072583443,
+                                         "scene_units":  "cm",
+                                         "meters_per_unit":  0.01,
+                                         "up_axis":  "Z",
+                                         "aodt_version":  "1.5.0",
+                                         "usd_version":  "0.26.8",
+                                         "disable_mobility":  true,
+                                         "vegetation_source":  "procedural"
+                                     },
+                        "geometry_inventory":  {
+                                                   "mesh_count":  5343,
+                                                   "building_exterior_meshes":  2708,
+                                                   "building_interior_meshes":  2634,
+                                                   "ground_meshes":  1,
+                                                   "building_meshes_total":  5342,
+                                                   "geometry_bounds_m":  {
+                                                                             "min":  [
+                                                                                         -586.2155151367188,
+                                                                                         -938.4972534179688,
+                                                                                         39.73123550415039
+                                                                                     ],
+                                                                             "max":  [
+                                                                                         586.2155151367188,
+                                                                                         938.4972534179688,
+                                                                                         414.5542297363281
+                                                                                     ]
+                                                                         },
+                                                   "ground_bounds_m":  {
+                                                                           "min":  [
+                                                                                       -786.2154541015625,
+                                                                                       -1138.497314453125,
+                                                                                       36.37101745605469
+                                                                                   ],
+                                                                           "max":  [
+                                                                                       786.2154541015625,
+                                                                                       1138.497314453125,
+                                                                                       98.34614562988281
+                                                                                   ]
+                                                                       }
+                                               },
+                        "usd_material_inventory":  {
+                                                       "material_definition_count":  1,
+                                                       "material_names":  [
+                                                                              "DefaultMaterial"
+                                                                          ],
+                                                       "tile_stage_direct_binding_count":  5342,
+                                                       "tile_stage_resolved_default_binding_count":  5342,
+                                                       "tile_stage_unbound_mesh_count":  1,
+                                                       "material_binding_api_applied":  false,
+                                                       "composed_master_warning":  "Bindings from referenced tile prims target /Materials/DefaultMaterial outside the reference scope and are ignored by OpenUSD composition warnings.",
+                                                       "formal_binding_validity":  "unresolved",
+                                                       "named_keyword_evidence":  {
+                                                                                      "glass_or_window_prim_or_material_names":  0,
+                                                                                      "concrete_prim_or_material_names":  0,
+                                                                                      "metal_prim_or_material_names":  0,
+                                                                                      "vegetation_or_tree_usd_mesh_names":  0,
+                                                                                      "building_meshes":  5342,
+                                                                                      "ground_meshes":  1
+                                                                                  },
+                                                       "material_tag_attribute":  {
+                                                                                      "attribute":  "primvars:MaterialTag",
+                                                                                      "distinct_values":  [
+                                                                                                              0,
+                                                                                                              2,
+                                                                                                              5,
+                                                                                                              12
+                                                                                                          ],
+                                                                                      "aggregate_value_counts":  {
+                                                                                                                     "0":  4841059,
+                                                                                                                     "2":  764796,
+                                                                                                                     "5":  2115,
+                                                                                                                     "12":  15731
+                                                                                                                 },
+                                                                                      "semantic_mapping_found":  false,
+                                                                                      "claim_boundary":  "The tags are evidence of encoded categories, but no supplied asset/material configuration maps them to glass, concrete, metal, or vegetation."
+                                                                                  },
+                                                       "glass_window_status":  "not_proven",
+                                                       "vegetation_tree_status":  "external GeoJSON exists, but no vegetation USD mesh/material binding or worker asset mapping was proven",
+                                                       "scene_limitation":  "Do not claim glass/window or vegetation RF effects until the exact AODT material and vegetation asset JSONs are supplied and resolved by a real worker run."
+                                                   },
+                        "aodt_conversion_evidence":  {
+                                                         "converter":  "external authorized scene preparation",
+                                                         "path":  "configs/geospatial/tokyo_aodt_scene_contract.json",
+                                                         "mesh_inventory":  null,
+                                                         "selected_geometry_rule":  "Exterior building geometry plus ground; interior/vegetation/tree/vehicle/people excluded.",
+                                                         "material_rule":  "Converted AODT scene uses a generic concrete contract.",
+                                                         "scope_boundary":  "Metadata-only evidence. Scene geometry is not distributed and must be supplied by an authorized user."
+                                                     }
+                    },
+    "raw_output":  {
+                       "formal_8ru_50ue_result_found":  false,
+                       "local_static_sample":  {
+                                                   "directory":  "\u003cAODT_CLIENT_ROOT\u003e/client/results/example_client_20260629_004708",
+                                                   "scope":  "one requested slot and two RU result files; not a formal full experiment",
+                                                   "files":  [
+                                                                 {
+                                                                     "name":  "cir_slot_5_ru_0.npz",
+                                                                     "bytes":  67645,
+                                                                     "sha256":  "596363495f652fe0aabfe6a73a70b38670f0da3b793390170beb7b42dd22e445"
+                                                                 },
+                                                                 {
+                                                                     "name":  "cir_slot_5_ru_0_first_path.csv",
+                                                                     "bytes":  101832,
+                                                                     "sha256":  "60ebf26b32fb95a200197340ded5f876dc888af90197600c5835219238490428"
+                                                                 },
+                                                                 {
+                                                                     "name":  "cir_slot_5_ru_1.npz",
+                                                                     "bytes":  65584,
+                                                                     "sha256":  "485769904e3a831d32c0ff986080b7a4a120dd045549e82998973d3460bdc875"
+                                                                 },
+                                                                 {
+                                                                     "name":  "cir_slot_5_ru_1_first_path.csv",
+                                                                     "bytes":  101587,
+                                                                     "sha256":  "aac103dad9e39d85bd5f19cceb39c64de491ca25642ac9b105dd0ea152df94ac"
+                                                                 }
+                                                             ],
+                                                   "npz_schema":  {
+                                                                      "values":  {
+                                                                                     "shape":  [
+                                                                                                   1,
+                                                                                                   1,
+                                                                                                   1,
+                                                                                                   2,
+                                                                                                   2,
+                                                                                                   2,
+                                                                                                   1,
+                                                                                                   2,
+                                                                                                   500
+                                                                                               ],
+                                                                                     "dtype":  "complex64",
+                                                                                     "meaning":  "complex CIR coefficients as returned by AODT client memory copy"
+                                                                                 },
+                                                                      "delays":  {
+                                                                                     "shape":  [
+                                                                                                   1,
+                                                                                                   1,
+                                                                                                   1,
+                                                                                                   2,
+                                                                                                   2,
+                                                                                                   1,
+                                                                                                   500
+                                                                                               ],
+                                                                                     "dtype":  "float32",
+                                                                                     "unit":  "seconds"
+                                                                                 },
+                                                                      "temporal_idx":  {
+                                                                                           "shape":  [
+
+                                                                                                     ],
+                                                                                           "dtype":  "int64"
+                                                                                       },
+                                                                      "ru_idx":  {
+                                                                                     "shape":  [
+
+                                                                                               ],
+                                                                                     "dtype":  "int64"
+                                                                                 }
+                                                                  },
+                                                   "representative_csv_columns_in_order":  [
+                                                                                               "tap_index",
+                                                                                               "delay_s",
+                                                                                               "real",
+                                                                                               "imag",
+                                                                                               "magnitude",
+                                                                                               "phase_rad",
+                                                                                               "power_linear",
+                                                                                               "magnitude_db"
+                                                                                           ],
+                                                   "csv_scope":  "Only one representative antenna/polarization path; the full multidimensional CIR remains in NPZ.",
+                                                   "identity_limitations":  [
+                                                                                "NPZ records ru_idx and temporal_idx but no UE IDs.",
+                                                                                "The selected UE list and dimension meanings must be recovered from the exact allocation/config manifest.",
+                                                                                "The file does not contain a serving-RU decision."
+                                                                            ]
+                                               },
+                       "rf_fields_proven":  [
+                                                {
+                                                    "field":  "complex CIR coefficient",
+                                                    "source":  "NPZ values",
+                                                    "unit":  "linear complex amplitude"
+                                                },
+                                                {
+                                                    "field":  "multipath delay",
+                                                    "source":  "NPZ delays / CSV delay_s",
+                                                    "unit":  "seconds"
+                                                },
+                                                {
+                                                    "field":  "path magnitude and power",
+                                                    "source":  "representative CSV derived from complex coefficient",
+                                                    "unit":  "linear and dB"
+                                                }
+                                            ],
+                       "rf_fields_not_proven_in_supplied_static_sample":  [
+                                                                              "path_gain_db with a validated aggregation rule",
+                                                                              "path_loss_db",
+                                                                              "received_power_dbm or RSRP",
+                                                                              "SNR",
+                                                                              "SINR",
+                                                                              "serving RU",
+                                                                              "explicit UE ID per result tensor",
+                                                                              "full 8-RU/50-UE/256-slot registry"
+                                                                          ],
+                       "database_and_export_capability":  {
+                                                              "configured_tables":  [
+                                                                                        "CIRS",
+                                                                                        "CFRS",
+                                                                                        "RAYPATHS"
+                                                                                    ],
+                                                              "parquet_export":  true,
+                                                              "iceberg_catalog":  "optional",
+                                                              "actual_table_or_parquet_fixture_supplied":  false
+                                                          }
+                   }
+}

@@ -1,0 +1,5 @@
+# Install with: pip install --no-deps -r requirements-legacy.txt
+# Their published metadata requires torch<2, but the project has been validated
+# with PyTorch 2.11.0 + CUDA 12.8.
+libzero==0.0.8
+rtdl==0.0.9

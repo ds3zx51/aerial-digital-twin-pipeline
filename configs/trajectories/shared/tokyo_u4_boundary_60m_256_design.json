@@ -1,0 +1,30 @@
+{
+  "trajectory_id": "tokyo_u4_boundary_60m_256",
+  "trajectory_type": "synthetic_multi_uav",
+  "coordinate_frame": "ENU",
+  "anchor_id": "configs/geospatial/tokyo_aodt_scene_contract.json#geodetic_anchor",
+  "source_scenario_config": "configs/scenario_layout_tokyo_docomo.json",
+  "geodetic_anchor_source": "configs/geospatial/tokyo_aodt_scene_contract.json#geodetic_anchor",
+  "ru_coordinates_source": "configs/scenario_layout_tokyo_docomo.json#bs",
+  "scene_bounds_source": "configs/geospatial/tokyo_aodt_scene_contract.json#ground+geometry",
+  "sample_count": 256,
+  "sample_interval_source": "configs/scenario_layout_tokyo_docomo.json#meta.slot_ms",
+  "start_time_utc": "2026-07-17T00:00:00Z",
+  "altitude_reference": "AGL",
+  "altitude_agl_m": 60.0,
+  "terrain_model": "reference_ru_flat_ground_approximation",
+  "scene_ground_reference_source": "configs/scenario_layout_tokyo_docomo.json#bs[].z_scene_m-height_agl_m",
+  "boundary_method": "geometric_approximation",
+  "interpolation_method": "smoothstep",
+  "maximum_uav_speed_mps": 25.0,
+  "minimum_uav_separation_m": 100.0,
+  "scene_edge_margin_m": 100.0,
+  "coordinate_round_trip_tolerance_m": 0.05,
+  "trajectory_start_reference_ru_ids": [1, 2, 5, 6],
+  "target_offsets_m": [
+    [75.0, 75.0],
+    [-75.0, 75.0],
+    [-75.0, -75.0],
+    [75.0, -75.0]
+  ]
+}

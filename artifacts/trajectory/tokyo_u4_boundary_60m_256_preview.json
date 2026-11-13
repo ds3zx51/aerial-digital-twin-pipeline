@@ -1,0 +1,95 @@
+{
+  "trajectory_id": "tokyo_u4_boundary_60m_256",
+  "boundary_region_centroid_enu_m": [
+    28.14162025,
+    -277.53460075
+  ],
+  "scene_bounds_m": {
+    "x": [
+      -786.2154541015625,
+      786.2154541015625
+    ],
+    "y": [
+      -1138.497314453125,
+      1138.497314453125
+    ],
+    "z": [
+      36.37101745605469,
+      414.5542297363281
+    ]
+  },
+  "routes": [
+    {
+      "ue_id": "uav_01",
+      "trajectory_start_reference_ru_id": 1,
+      "start_enu_m": [
+        438.621117,
+        960.696695,
+        119.43195
+      ],
+      "target_enu_m": [
+        103.14162025,
+        -202.53460075,
+        119.43195
+      ],
+      "scene_ground_offset_m": 59.43195,
+      "route_distance_m": 1210.641788537,
+      "duration_s": 63.75,
+      "average_speed_mps": 18.990459428
+    },
+    {
+      "ue_id": "uav_02",
+      "trajectory_start_reference_ru_id": 2,
+      "start_enu_m": [
+        -582.240421,
+        29.112021,
+        123.444298
+      ],
+      "target_enu_m": [
+        -46.85837975,
+        -202.53460075,
+        123.444298
+      ],
+      "scene_ground_offset_m": 63.444298,
+      "route_distance_m": 583.347312894,
+      "duration_s": 63.75,
+      "average_speed_mps": 9.150546085
+    },
+    {
+      "ue_id": "uav_03",
+      "trajectory_start_reference_ru_id": 5,
+      "start_enu_m": [
+        -469.67394,
+        -1038.497314453,
+        108.390293
+      ],
+      "target_enu_m": [
+        -46.85837975,
+        -352.53460075,
+        108.390293
+      ],
+      "scene_ground_offset_m": 48.390293,
+      "route_distance_m": 805.802607703,
+      "duration_s": 63.75,
+      "average_speed_mps": 12.640040905
+    },
+    {
+      "ue_id": "uav_04",
+      "trajectory_start_reference_ru_id": 6,
+      "start_enu_m": [
+        686.215454102,
+        -976.223106,
+        116.33765
+      ],
+      "target_enu_m": [
+        103.14162025,
+        -352.53460075,
+        116.33765
+      ],
+      "scene_ground_offset_m": 56.33765,
+      "route_distance_m": 853.792976841,
+      "duration_s": 63.75,
+      "average_speed_mps": 13.392831009
+    }
+  ]
+}

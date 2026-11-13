@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "scene_id": "aerpaw_lake_wheeler_osm_smoke_v1",
+  "profile": "osm_only_smoke",
+  "formal_eligible": false,
+  "downloaded_utc": "2026-08-17T09:09:48.245840Z",
+  "source": {
+    "provider": "OpenStreetMap contributors",
+    "api": "OpenStreetMap API 0.6 map bbox",
+    "url": "https://api.openstreetmap.org/api/0.6/map?bbox=-78.7023739859328,35.72385806854901,-78.69043438214045,35.74305524542473",
+    "license": "ODbL 1.0",
+    "attribution": "© OpenStreetMap contributors"
+  },
+  "requested_bbox_wgs84": {
+    "order": "west,south,east,north",
+    "values": [
+      -78.7023739859328,
+      35.72385806854901,
+      -78.69043438214045,
+      35.74305524542473
+    ]
+  },
+  "artifact": {
+    "path": "scenes/aerpaw_lake_wheeler/source/osm/lake_wheeler_osm_smoke_v1.osm",
+    "media_type": "application/vnd.openstreetmap.data+xml",
+    "size_bytes": 490203,
+    "sha256": "e00e7de73b3f1836e59438edeb64c97f16d1dc27f24534ba36f1cc9f0178f30a"
+  },
+  "element_counts": {
+    "node": 2193,
+    "way": 185,
+    "relation": 1
+  },
+  "returned_node_extent_wgs84": [
+    -79.0492439,
+    35.5649268,
+    -78.6663379,
+    35.7469718
+  ],
+  "aodt_handoff": {
+    "method": "OSMTask bbox using the exact requested_bbox_wgs84",
+    "output_folder_key": "aerpaw/lake_wheeler_osm_smoke_v1.usd",
+    "submitted": false
+  },
+  "limitations": [
+    "This OSM snapshot is a plumbing/smoke-scene source, not the paper supplementary foliage evidence.",
+    "AODT OSMTask retrieves/builds from the same bbox; the local .osm is retained for audit and reproducibility."
+  ]
+}

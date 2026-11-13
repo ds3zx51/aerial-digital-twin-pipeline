@@ -1,0 +1,684 @@
+{
+    "schema_version":  "aodt-baseline-static-topology-v1",
+    "generated_at_utc":  "2026-07-17T08:58:43.2809266Z",
+    "status":  "locked_scenario_topology_pending_aodt_mapping",
+    "scenario_source_file":  "configs/scenario_layout_tokyo_docomo.json",
+    "scenario_source_sha256":  "ba5e0807d5a277948778b8c71d1e54ab3e08be666cb36b2796477b46c09f5976",
+    "scenario_version":  "aodt-advtabddpm-tokyo-8bs-50ue-coverage-conditioned-v7",
+    "coordinate_contract":  {
+                                "coordinate_frame":  "Tokyo scene-local Cartesian",
+                                "units":  "metres",
+                                "axis_order":  "X/Y/Z",
+                                "z_semantics":  "scene_absolute_m",
+                                "scene_to_utm_rule":  "easting=386292.85575619363+x; northing=3946784.3072583443+y",
+                                "crs":  "EPSG:32654",
+                                "source_anchor":  "\u003cAODT_SCENE_ARCHIVE\u003e::tokyo/sim/master_metadata.json",
+                                "aodt_coordinate_transform_validated":  false,
+                                "claim_boundary":  "These are the formal AODT comparison coordinates. AODT object IDs and the AODT georef/local-coordinate conversion remain unresolved and must be validated before 01B can pass."
+                            },
+    "counts":  {
+                   "ru":  8,
+                   "ue":  50,
+                   "indoor_ue":  40,
+                   "outdoor_ue":  10,
+                   "terrestrial_ue":  50,
+                   "aerial_ue":  0,
+                   "uav":  0,
+                   "gpx_references":  0
+               },
+    "validation":  {
+                       "all_coordinates_finite":  true,
+                       "duplicate_ru_source_ids":  0,
+                       "duplicate_ue_source_ids":  0,
+                       "duplicate_display_ids":  0,
+                       "all_ue_mobility_status_static":  true,
+                       "all_ue_terrestrial":  true,
+                       "uav_nodes_found":  0,
+                       "gpx_references_found":  0,
+                       "all_nodes_within_scene_ground_xy_bounds":  true,
+                       "scene_ground_xy_bounds_m":  {
+                                                        "min":  [
+                                                                    -786.2154541015625,
+                                                                    -1138.497314453125
+                                                                ],
+                                                        "max":  [
+                                                                    786.2154541015625,
+                                                                    1138.497314453125
+                                                                ]
+                                                    },
+                       "aodt_backend_id_mapping_complete":  false
+                   },
+    "rus":  [
+                {
+                    "id":  "RU00",
+                    "source_id":  0,
+                    "x_m":  -566.71401,
+                    "y_m":  607.470839,
+                    "z_m":  96.468719,
+                    "node_type":  "RU",
+                    "mobility_status":  "static"
+                },
+                {
+                    "id":  "RU01",
+                    "source_id":  1,
+                    "x_m":  438.621117,
+                    "y_m":  960.696695,
+                    "z_m":  84.43195,
+                    "node_type":  "RU",
+                    "mobility_status":  "static"
+                },
+                {
+                    "id":  "RU02",
+                    "source_id":  2,
+                    "x_m":  -582.240421,
+                    "y_m":  29.112021,
+                    "z_m":  88.444298,
+                    "node_type":  "RU",
+                    "mobility_status":  "static"
+                },
+                {
+                    "id":  "RU03",
+                    "source_id":  3,
+                    "x_m":  551.187599,
+                    "y_m":  219.310559,
+                    "z_m":  73.395966,
+                    "node_type":  "RU",
+                    "mobility_status":  "static"
+                },
+                {
+                    "id":  "RU04",
+                    "source_id":  4,
+                    "x_m":  780,
+                    "y_m":  176.612928,
+                    "z_m":  86.269459,
+                    "node_type":  "RU",
+                    "mobility_status":  "static"
+                },
+                {
+                    "id":  "RU05",
+                    "source_id":  5,
+                    "x_m":  -469.67394,
+                    "y_m":  -1123.724013,
+                    "z_m":  73.390293,
+                    "node_type":  "RU",
+                    "mobility_status":  "static"
+                },
+                {
+                    "id":  "RU06",
+                    "source_id":  6,
+                    "x_m":  725.859725,
+                    "y_m":  -976.223106,
+                    "z_m":  81.33765,
+                    "node_type":  "RU",
+                    "mobility_status":  "static"
+                },
+                {
+                    "id":  "RU07",
+                    "source_id":  7,
+                    "x_m":  -9.214894,
+                    "y_m":  719.472593,
+                    "z_m":  98.445328,
+                    "node_type":  "RU",
+                    "mobility_status":  "static"
+                }
+            ],
+    "ues":  [
+                {
+                    "id":  "UE00",
+                    "source_id":  0,
+                    "x_m":  521.318766,
+                    "y_m":  -207.819738,
+                    "z_m":  52.530449,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE01",
+                    "source_id":  1,
+                    "x_m":  284.256809,
+                    "y_m":  -382.154919,
+                    "z_m":  48.407285,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE02",
+                    "source_id":  2,
+                    "x_m":  -509.518745,
+                    "y_m":  -63.062177,
+                    "z_m":  60.429989,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE03",
+                    "source_id":  3,
+                    "x_m":  -416.191598,
+                    "y_m":  89.822846,
+                    "z_m":  64.749735,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE04",
+                    "source_id":  4,
+                    "x_m":  -515.406743,
+                    "y_m":  77.355134,
+                    "z_m":  64.102854,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE05",
+                    "source_id":  5,
+                    "x_m":  -509.417185,
+                    "y_m":  -61.987798,
+                    "z_m":  60.627435,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE06",
+                    "source_id":  6,
+                    "x_m":  485,
+                    "y_m":  -770,
+                    "z_m":  75.01828,
+                    "node_type":  "UE",
+                    "ue_type":  "outdoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE07",
+                    "source_id":  7,
+                    "x_m":  -495,
+                    "y_m":  755,
+                    "z_m":  70.742073,
+                    "node_type":  "UE",
+                    "ue_type":  "outdoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE08",
+                    "source_id":  8,
+                    "x_m":  -266.053044,
+                    "y_m":  463.048441,
+                    "z_m":  72.621078,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE09",
+                    "source_id":  9,
+                    "x_m":  -8.956284,
+                    "y_m":  813.935338,
+                    "z_m":  72.289177,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE10",
+                    "source_id":  10,
+                    "x_m":  -263.819594,
+                    "y_m":  461.677196,
+                    "z_m":  72.873418,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE11",
+                    "source_id":  11,
+                    "x_m":  127.702854,
+                    "y_m":  786.991879,
+                    "z_m":  70.949673,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE12",
+                    "source_id":  12,
+                    "x_m":  129.880122,
+                    "y_m":  788.344706,
+                    "z_m":  70.989205,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE13",
+                    "source_id":  13,
+                    "x_m":  130.961839,
+                    "y_m":  786.107676,
+                    "z_m":  70.63005,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE14",
+                    "source_id":  14,
+                    "x_m":  521.16908,
+                    "y_m":  -213.889551,
+                    "z_m":  52.955899,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE15",
+                    "source_id":  15,
+                    "x_m":  -240.997638,
+                    "y_m":  -703.006882,
+                    "z_m":  68.674593,
+                    "node_type":  "UE",
+                    "ue_type":  "outdoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE16",
+                    "source_id":  16,
+                    "x_m":  305,
+                    "y_m":  575,
+                    "z_m":  58.367416,
+                    "node_type":  "UE",
+                    "ue_type":  "outdoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE17",
+                    "source_id":  17,
+                    "x_m":  283.775008,
+                    "y_m":  -382.51225,
+                    "z_m":  48.362189,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE18",
+                    "source_id":  18,
+                    "x_m":  -514.870623,
+                    "y_m":  75.537915,
+                    "z_m":  64.008214,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE19",
+                    "source_id":  19,
+                    "x_m":  278.667493,
+                    "y_m":  -382.122259,
+                    "z_m":  47.791513,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE20",
+                    "source_id":  20,
+                    "x_m":  -50.118556,
+                    "y_m":  763.376251,
+                    "z_m":  62.697576,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE21",
+                    "source_id":  21,
+                    "x_m":  -264.440095,
+                    "y_m":  461.36657,
+                    "z_m":  72.754423,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE22",
+                    "source_id":  22,
+                    "x_m":  -515.498721,
+                    "y_m":  75.358879,
+                    "z_m":  64.042454,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE23",
+                    "source_id":  23,
+                    "x_m":  -415.701948,
+                    "y_m":  91.346315,
+                    "z_m":  64.780023,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE24",
+                    "source_id":  24,
+                    "x_m":  -266.87796,
+                    "y_m":  462.795258,
+                    "z_m":  72.498308,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE25",
+                    "source_id":  25,
+                    "x_m":  -240,
+                    "y_m":  -705,
+                    "z_m":  69.064054,
+                    "node_type":  "UE",
+                    "ue_type":  "outdoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE26",
+                    "source_id":  26,
+                    "x_m":  520,
+                    "y_m":  785,
+                    "z_m":  67.291451,
+                    "node_type":  "UE",
+                    "ue_type":  "outdoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE27",
+                    "source_id":  27,
+                    "x_m":  -8.122528,
+                    "y_m":  811.28127,
+                    "z_m":  72.058784,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE28",
+                    "source_id":  28,
+                    "x_m":  -50.967097,
+                    "y_m":  760.494242,
+                    "z_m":  62.11012,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE29",
+                    "source_id":  29,
+                    "x_m":  -285,
+                    "y_m":  370,
+                    "z_m":  60.765316,
+                    "node_type":  "UE",
+                    "ue_type":  "outdoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE30",
+                    "source_id":  30,
+                    "x_m":  -510.087225,
+                    "y_m":  -62.419719,
+                    "z_m":  60.627492,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE31",
+                    "source_id":  31,
+                    "x_m":  -264.893242,
+                    "y_m":  462.198059,
+                    "z_m":  72.717609,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE32",
+                    "source_id":  32,
+                    "x_m":  132.104244,
+                    "y_m":  787.902982,
+                    "z_m":  70.792131,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE33",
+                    "source_id":  33,
+                    "x_m":  -510.136045,
+                    "y_m":  -61.396973,
+                    "z_m":  60.833818,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE34",
+                    "source_id":  34,
+                    "x_m":  -414.493591,
+                    "y_m":  89.595764,
+                    "z_m":  64.859083,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE35",
+                    "source_id":  35,
+                    "x_m":  521.233479,
+                    "y_m":  -212.632079,
+                    "z_m":  52.916818,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE36",
+                    "source_id":  36,
+                    "x_m":  -15.684353,
+                    "y_m":  815.051127,
+                    "z_m":  71.577655,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE37",
+                    "source_id":  37,
+                    "x_m":  -189.958544,
+                    "y_m":  371.0552,
+                    "z_m":  62.103226,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE38",
+                    "source_id":  38,
+                    "x_m":  -6.763041,
+                    "y_m":  811.161415,
+                    "z_m":  72.220618,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE39",
+                    "source_id":  39,
+                    "x_m":  279.9658,
+                    "y_m":  -381.914419,
+                    "z_m":  47.874819,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE40",
+                    "source_id":  40,
+                    "x_m":  440,
+                    "y_m":  -420,
+                    "z_m":  50.693917,
+                    "node_type":  "UE",
+                    "ue_type":  "outdoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE41",
+                    "source_id":  41,
+                    "x_m":  520.806303,
+                    "y_m":  -214.925132,
+                    "z_m":  52.978262,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE42",
+                    "source_id":  42,
+                    "x_m":  -50.927531,
+                    "y_m":  762.863034,
+                    "z_m":  62.570198,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE43",
+                    "source_id":  43,
+                    "x_m":  -494.433012,
+                    "y_m":  754.075242,
+                    "z_m":  70.764087,
+                    "node_type":  "UE",
+                    "ue_type":  "outdoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE44",
+                    "source_id":  44,
+                    "x_m":  -475,
+                    "y_m":  -140,
+                    "z_m":  47.150371,
+                    "node_type":  "UE",
+                    "ue_type":  "outdoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE45",
+                    "source_id":  45,
+                    "x_m":  -415.349951,
+                    "y_m":  87.802964,
+                    "z_m":  64.782696,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE46",
+                    "source_id":  46,
+                    "x_m":  -189.258957,
+                    "y_m":  368.849141,
+                    "z_m":  62.031256,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE47",
+                    "source_id":  47,
+                    "x_m":  -264.931007,
+                    "y_m":  461.654306,
+                    "z_m":  72.678428,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE48",
+                    "source_id":  48,
+                    "x_m":  -514.65393099999994,
+                    "y_m":  76.075562,
+                    "z_m":  64.012202,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                },
+                {
+                    "id":  "UE49",
+                    "source_id":  49,
+                    "x_m":  -50.82144,
+                    "y_m":  763.407016,
+                    "z_m":  62.67921,
+                    "node_type":  "UE",
+                    "ue_type":  "indoor",
+                    "mobility_status":  "static",
+                    "terrestrial":  true
+                }
+            ],
+    "aodt_mapping":  {
+                         "status":  "not_materialized",
+                         "scenario_ru_id_to_aodt_ru_id":  null,
+                         "scenario_ue_id_to_aodt_ue_id":  null,
+                         "backend_object_paths":  null,
+                         "required_next_evidence":  "Resolved AODT API-generated YAML plus server-reported RU/UE registries and positions."
+                     }
+}

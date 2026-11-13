@@ -1,0 +1,25 @@
+{
+  "schema_version": "aodt-scene-geospatial-contract-v1",
+  "description": "Metadata-only contract for an authorized Tokyo AODT scene. The scene geometry is not distributed by this repository.",
+  "meters_per_unit": 0.01,
+  "coordinate_rule": "scene_xyz_m = composed OpenUSD world coordinate * metersPerUnit",
+  "geometry": {
+    "min_m": [-586.2155151367188, -938.4972534179688, 39.73123550415039],
+    "max_m": [586.2155151367188, 938.4972534179688, 414.5542297363281]
+  },
+  "ground": {
+    "min_m": [-786.2154541015625, -1138.497314453125, 36.37101745605469],
+    "max_m": [786.2154541015625, 1138.497314453125, 98.34614562988281]
+  },
+  "geodetic_anchor": {
+    "crs": "EPSG:32654",
+    "center_lat": 35.65836835928626,
+    "center_lon": 139.74380459351428,
+    "center_z": 0.0,
+    "vertical_datum": "ellipsoid",
+    "anchor_x": 386292.85575619363,
+    "anchor_y": 3946784.3072583443
+  },
+  "distribution_boundary": "metadata_only_scene_omitted",
+  "upstream_scene_required": true
+}

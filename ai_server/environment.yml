@@ -1,0 +1,11 @@
+name: aodt-advtabddpm
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      # Install the CUDA-compatible PyTorch wheel for the host first.
+      - -r AdvTabDDPM/requirements.txt
+# After creation, install the legacy requirements with:
+# python -m pip install --no-deps -r AdvTabDDPM/requirements-legacy.txt

@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "aerpaw-lake-wheeler-coverage-final-paper-v1",
+  "source": {
+    "title": "Analysis and Prediction of Coverage and Channel Rank for UAV Networks in Rural Scenarios With Foliage",
+    "doi": "10.1109/OJVT.2025.3585537",
+    "paper_access": "Obtain from the publisher using DOI 10.1109/OJVT.2025.3585537",
+    "coverage_override_location": "Section IV-A / coverage setup",
+    "generic_rt_table_location": "Table 2"
+  },
+  "formal_profile": {
+    "name": "paper_reconstruction",
+    "carrier_frequency_hz": 3300000000.0,
+    "array_mode": "SISO",
+    "tx_elements": 1,
+    "rx_elements": 1,
+    "physical_link_direction": "UAV_TO_TOWER",
+    "aodt_endpoint_mapping": "TOWER_RU_TO_UAV_UE",
+    "reciprocity_assumption": true,
+    "transmit_power_dbm": 44.0,
+    "measurement_period_s": 0.1,
+    "capture_duration_s": 0.02,
+    "uav_count": 1,
+    "tower_ids": ["LW1", "LW2", "LW3", "LW4", "LW5"],
+    "antenna_model": "baseline_siso_antenna_model",
+    "antenna_pattern_status": "paper_exact_pattern_not_available"
+  },
+  "generic_rt_reference_only": {
+    "carrier_frequency_hz": 3400000000.0,
+    "tx_elements": 4,
+    "rx_elements": 4,
+    "element_spacing_wavelength": 0.5,
+    "horizontal_uav_interval_m": 30.0,
+    "must_not_replace_formal_coverage_profile": true
+  },
+  "scene": {
+    "dimensions_m": {"east_west": 1080.0, "north_south": 2130.0},
+    "tower_height_agl_m": 10.0,
+    "max_reflections": 2,
+    "scattering_enabled": false,
+    "diffraction_enabled": false,
+    "building_material": "itu_concrete",
+    "ground_material": "itu_medium_dry_ground",
+    "tree_trunk_material": "itu_wood",
+    "vegetation": {
+      "tree_height_m": 20.0,
+      "tree_max_diameter_m": 10.0,
+      "placement": "OSM forest randomized non-overlap plus satellite-guided manual supplement",
+      "supplementary_layer_required_for_formal": true,
+      "relative_permittivity_at_3_4_ghz": {"real": 6.1412, "imaginary": 2.0407}
+    },
+    "materials": {
+      "itu_concrete": {"a": 5.24, "b": 0.0, "c": 0.0462, "d": 0.7822},
+      "itu_medium_dry_ground": {"a": 15.0, "b": -0.1, "c": 0.035, "d": 1.63},
+      "itu_wood": {"a": 1.99, "b": 0.0, "c": 0.0047, "d": 1.0718}
+    }
+  },
+  "trajectory": {
+    "formal_sample_clock": "LW1 measurement timestamps",
+    "formal_sample_count": 3530,
+    "raw_gps_sample_count": 917,
+    "raw_altitude_preserved": true,
+    "simulation_height_rule": "max(raw_relative_altitude_m, 0.5)",
+    "minimum_simulation_height_m": 0.5,
+    "gpx_role": "audit_only",
+    "aodt_execution_role": "explicit_3d_waypoints",
+    "aodt_1_5_arrival_time_support": false
+  },
+  "tower_coordinates": {
+    "horizontal_source": "AERPAW manual-linked Keysight sample code; not claimed as Dataset21 phase centers",
+    "vertical_source": "paper uniform 10 m AGL assumption",
+    "LW1": {"latitude_deg": 35.72750947, "longitude_deg": -78.69595810},
+    "LW2": {"latitude_deg": 35.72821305, "longitude_deg": -78.70090823},
+    "LW3": {"latitude_deg": 35.72491205, "longitude_deg": -78.69190014},
+    "LW4": {"latitude_deg": 35.73318358, "longitude_deg": -78.69836420},
+    "LW5": {"latitude_deg": 35.74294142, "longitude_deg": -78.69962993}
+  },
+  "measurement": {
+    "channels": ["USRP1", "USRP2"],
+    "raw_lengths_expected": {"LW1": 3530, "LW2": 3556, "LW3": 3369, "LW4": 3120, "LW5": 3043},
+    "calibration_search_db": {"minimum": -50.0, "maximum": 50.0, "step": 0.1},
+    "calibration_objective": "minimum RMSE on calibration split",
+    "no_path_representation": null,
+    "synthetic_rss_floor_forbidden": true
+    ,"waypoint_indices_matlab_1_based": {
+      "LW1": {"A": 987, "B": 1075, "C": 1478, "D": 2217, "E": 2588, "F": 3114},
+      "LW2": {"A": 927, "B": 1147, "C": 1655, "D": 2352, "E": 2768, "F": 3178},
+      "LW3": {"A": 830, "B": 907, "C": 1315, "D": 2040, "E": 2700, "F": 3007},
+      "LW4": {"A": 798, "B": 973, "C": 1358, "D": 1984, "E": 2365, "F": 2786},
+      "LW5": {"A": 785, "B": 860, "C": 1283, "D": 1937, "E": 2350, "F": 2715}
+    }
+  },
+  "formal_required_external_artifacts": [
+    "verified AODT scene bundle (USD plus dependencies)",
+    "paper supplementary foliage GeoJSON or an evidence-equivalent digitized layer",
+    "scene georeferencing manifest and terrain heights sampled at trajectory/tower points"
+  ]
+}

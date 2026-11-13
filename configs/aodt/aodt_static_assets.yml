@@ -1,0 +1,15 @@
+# Worker-side AODT 1.5 asset references.
+#
+# These paths are resolved by the Azure AODT worker, not by the Windows
+# client. 05B refuses an online run unless the operator explicitly confirms
+# that the exact bundle is present on the worker.
+du: test_data/assets/du.json
+ru: test_data/assets/gnb.json
+ue: test_data/assets/ue.json
+materials: test_data/assets/materials.json
+scatterers: test_data/assets/car_small.json
+vegetation_materials: test_data/assets/vegetation_materials.json
+vegetation_assets: test_data/assets/street_tree.json
+scenario: test_data/assets/scenario.json
+panels: test_data/assets/panel.json
+
